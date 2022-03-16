@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,15 +12,16 @@
     <link rel="stylesheet" href="css/media.css">
     <link type="image/x-icon" href="favicon.ico" rel="shortcut icon">
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top nav__navigation navbar-dark">
+    <nav class="navbar navbar-expand-lg fixed-top nav__navigation navbar-dark align-items-center">
         <div class="container">
             <a href="" class="navbar-brand navbar__brand"><img src="img/brand.png"></a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navmobile">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navmobile">
-                <ul class="nav navbar-nav ms-auto">
+                <ul class="nav navbar-nav ms-auto gap-4">
                     <li class="nav-item"><a href="" class="nav-link nav__link active">Главная</a></li>
                     <li class="nav-item"><a href="" class="nav-link nav__link">Курсы</a></li>
                     <li class="nav-item"><a href="" class="nav-link nav__link">Расписание</a></li>
@@ -29,18 +31,93 @@
                 </ul>
                 <ul class="nav navbar-nav ms-lg-auto">
                     <div class="btn__grad-dodger">
-                <li class="nav-item btn__grad-dodger"><a href="" class="nav-link nav__link all-btn">Зайти в Кабинете</a></li>
-                </div>
-            </ul>
+                        <li class="nav-item btn__grad-dodger"><a href="" type="button" class="nav-link nav__link all-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Зайти в
+                                Кабинете</a></li>
+                        <!-- Button trigger modal -->
+                        <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            Launch static backdrop modal
+                        </button> -->
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Авторизация</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="">
+                                            <label>Логин: </label>
+                                        <input type="text" class="form-control">  
+                                        <br>
+                                        <label>Пароль: </label>         
+                                        <input type="password" class="form-control">   
+                                        <br>
+                                        <label for="use">
+                                            <input type="checkbox" id="use"> Запомнить?
+                                        </label>                              
+                                        </form>
+                                        <br>
+                                    <button type="button" class="btn btn-primary me-auto">Авторизоваться</button>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <!-- <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button> -->
+                                        
+                                    <button type="button" class="btn btn-primary ms-auto" data-bs-toggle="modal" data-bs-target="#statickreg">Зарегистрироваться</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="statickreg" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="statickregLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="statickregLabel">Регистрация</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="">
+                                            <label>Придумайте Логин: </label>
+                                        <input type="text" class="form-control">  
+                                        <br>
+                                        <label>Пароль: </label>         
+                                        <input type="password" class="form-control">   
+                                        <br>
+                                        <label>Повторите Пароль: </label>         
+                                        <input type="password" class="form-control">   
+                                        <br>
+                                        <label for="use">
+                                            <input type="checkbox" id="use"> Запомнить?
+                                        </label>                              
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <!-- <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button> -->
+                                    <button type="button" class="btn btn-primary ms-auto">Зарегистрироваться</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
             </div>
         </div>
     </nav>
     <header class="header" id="header">
         <div class="container header__content">
             <div class="col col-xl-7">
-            <h1 class="header__title">
-                <span>Первый курс</span> 
-                по компьютерной сборке</h1>
+                <h1 class="header__title">
+                    <span>Первый курс</span>
+                    по компьютерной сборке
+                </h1>
                 <div class="header__time">
                     <div class="header__time-days">
                         20
@@ -63,32 +140,41 @@
         </div>
         <div class="header__content-bottom position-absolute">
             <div class="container">
-                <div class="row justify-content-md-between">
-                    <div class="col col-md-4 col-xl-2">
-                <div class="btn__grad-orange">
-                    <a href="" class="all-btn">Заказать курс</a>
+                <div class="row justify-content-md-between align-items-center">
+                    <div class="col col-6 col-md-4 col-xl-2">
+                        <div class="btn__grad-orange">
+                            <a href="" class="all-btn">Заказать курс</a>
+                        </div>
+                    </div>
+                    <div class="col col-6 col-md-8 col-xl-3 sm-gap-sm">
+                        <p class="header__content-txt">Учеников всего: <span>200</span></p>
+                        <p class="header__content-txt">Успешно закончили курс: <span>190</span></p>
+                    </div>
+                    <!-- <div class="col col-md-8 col-xl-3 sm-gap-sm">
+                        Учеников всего: 200 <br>
+                        Успешно закончили курс: 190
+                    </div> -->
+                    
+                    <div class="col col-xl-7 mt-3 mt-xl-0 sm-gap">
+                        <div class="header__content-donate">
+                            <div class="color-opacity">
+                            Заработано учениками: <span>400 000₽</span>
+                        </div>
+                            <div class="progress header__content-progress">
+                                <div class="progress-bar header__content__progress-bar w-75" role="progressbar"
+                                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="d-flex justify-content-between color-opacity">
+                                <span>0</span>
+                                <span>1 000 000₽</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col col-md-8 col-xl-3 sm-gap-sm">
-                Учеников всего: 200
-                Успешно закончили курс: 190
-            </div>
-            <div class="col col-xl-7 mt-md-3 sm-gap">
-                <div class="header__content-donate">
-                    Заработано учениками: <span>400 000₽</span>
-<div class="progress header__content-progress">
-  <div class="progress-bar header__content__progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<div class="d-flex justify-content-between">
-    <span>0</span>
-    <span>1 000 000₽</span>
-</div>
-                </div>
-            </div>
-            </div>
             </div>
         </div>
     </header>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

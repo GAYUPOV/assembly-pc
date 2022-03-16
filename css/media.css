@@ -3,7 +3,19 @@
         font-size: 40px;
     }
 }
+@media (min-width: 1400px) {
+    .header {
+        min-height: 100vh;
+    }
+}
+@media (max-width: 991px) {
+      .btn__grad-dodger {
+        border-radius: unset;
+    }
+}
+@media (max-width: 506px) {
 
+}
 @media (max-width: 576px) {
     .header__time {
         justify-content: center;
@@ -32,8 +44,5 @@
     }
     .header__title {
         text-align: center;
-    }
-    .btn__grad-dodger {
-        border-radius: unset;
     }
 }
